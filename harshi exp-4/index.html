@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Train Reservation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Online Train Reservation System</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Book Ticket</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="train-list">
+      <h2>Available Trains</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Train</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Departure</th>
+            <th>Fare</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Express 101</td>
+            <td>New York</td>
+            <td>Chicago</td>
+            <td>10:00 AM</td>
+            <td>$100</td>
+            <td><a href="booking.html?train=Express 101">Book</a></td>
+          </tr>
+          <tr>
+            <td>Fastline 205</td>
+            <td>Los Angeles</td>
+            <td>San Diego</td>
+            <td>12:00 PM</td>
+            <td>$60</td>
+            <td><a href="booking.html?train=Fastline 205">Book</a></td>
+          </tr>
+          <!-- Add more trains as needed -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Train Reservation System</p>
+  </footer>
+</body>
+</html>
