@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Hotel Room Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px #aaa;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form input, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    form button {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online Hotel Room Booking</h1>
+  <nav>
+    <a href="#book">Book Room</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="book">
+  <h2>Book a Room</h2>
+  <form onsubmit="return validateBookingForm()" method="POST" action="book_room.php">
+    <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" id="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+    <select name="room_type" required>
+      <option value="">-- Select Room Type --</option>
+      <option value="single">Single Room</option>
+      <option value="double">Double Room</option>
+      <option value="suite">Suite</option>
+    </select>
+    <input type="date" name="checkin" required>
+    <input type="date" name="checkout" required>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: support@hotelbooking.com</p>
+  <p>Phone: +123-456-7890</p>
+  <p>Location: Main Street, City Center</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Online Hotel Booking. All rights reserved.</p>
+</footer>
+
+<script>
+  function validateBookingForm() {
+    const phone = document.getElementById("phone").value;
+    const fullname = document.getElementById("fullname").value;
+
+    if (fullname.length < 3) {
+      alert("Full name must be at least 3 characters.");
+      return false;
+    }
+    if (!/^\d{10}$/.test(phone)) {
+      alert("Phone number must be 10 digits.");
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>
