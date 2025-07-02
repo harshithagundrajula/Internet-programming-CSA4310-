@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Cake Ordering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Order Your Cake Online</h1>
+</header>
+
+<main>
+  <section class="order-form">
+    <h2>Cake Order Form</h2>
+    <form action="order.php" method="POST">
+      <label>Customer Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required />
+
+      <label>Select Cake:</label>
+      <select name="cake" required>
+        <option value="Chocolate">Chocolate Cake</option>
+        <option value="Vanilla">Vanilla Cake</option>
+        <option value="Red Velvet">Red Velvet Cake</option>
+        <option value="Black Forest">Black Forest Cake</option>
+      </select>
+
+      <label>Quantity:</label>
+      <input type="number" name="quantity" min="1" value="1" required />
+
+      <label>Delivery Address:</label>
+      <textarea name="address" rows="3" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 SweetBite Cakes</p>
+</footer>
+
+</body>
+</html>
