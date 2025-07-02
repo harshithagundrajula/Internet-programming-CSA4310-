@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty Parlor Appointment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Glamour Touch - Book Your Appointment</h1>
+</header>
+
+<main>
+  <section class="form-container">
+    <h2>Appointment Form</h2>
+    <form action="book.php" method="POST">
+      <label>Full Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required />
+
+      <label>Service:</label>
+      <select name="service" required>
+        <option value="Haircut">Haircut</option>
+        <option value="Facial">Facial</option>
+        <option value="Manicure">Manicure</option>
+        <option value="Pedicure">Pedicure</option>
+        <option value="Makeup">Makeup</option>
+      </select>
+
+      <label>Preferred Date:</label>
+      <input type="date" name="date" required />
+
+      <label>Preferred Time:</label>
+      <input type="time" name="time" required />
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Glamour Touch Beauty Parlor</p>
+</footer>
+
+</body>
+</html>
