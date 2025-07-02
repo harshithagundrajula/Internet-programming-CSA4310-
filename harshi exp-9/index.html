@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GadgetZone - Shop Electronics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>GadgetZone</h1>
+  <p>Your Online Store for Electronic Gadgets</p>
+</header>
+
+<main>
+  <section class="products">
+    <h2>Available Gadgets</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Smartphone</h3>
+        <p>Price: $499</p>
+      </div>
+      <div class="product">
+        <h3>Wireless Earbuds</h3>
+        <p>Price: $89</p>
+      </div>
+      <div class="product">
+        <h3>Smartwatch</h3>
+        <p>Price: $199</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Place Your Order</h2>
+    <form action="order.php" method="POST">
+      <label>Full Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Select Product:</label>
+      <select name="product" required>
+        <option value="Smartphone">Smartphone - $499</option>
+        <option value="Wireless Earbuds">Wireless Earbuds - $89</option>
+        <option value="Smartwatch">Smartwatch - $199</option>
+      </select>
+
+      <label>Quantity:</label>
+      <input type="number" name="quantity" min="1" value="1" required />
+
+      <label>Shipping Address:</label>
+      <textarea name="address" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 GadgetZone. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
