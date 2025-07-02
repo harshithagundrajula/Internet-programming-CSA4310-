@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Reservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Online Flight Reservation</h1>
+</header>
+
+<main>
+  <section>
+    <h2>Available Flights</h2>
+    <table>
+      <tr>
+        <th>Flight</th><th>From</th><th>To</th><th>Time</th><th>Price</th>
+      </tr>
+      <tr>
+        <td>FL001</td><td>New York</td><td>London</td><td>10:00 AM</td><td>$450</td>
+      </tr>
+      <tr>
+        <td>FL205</td><td>Los Angeles</td><td>Tokyo</td><td>3:30 PM</td><td>$750</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="form-section">
+    <h2>Book Your Ticket</h2>
+    <form action="book.php" method="POST">
+      <label>Full Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Passport No:</label>
+      <input type="text" name="passport" required>
+
+      <label>Flight Code:</label>
+      <select name="flight">
+        <option value="FL001">FL001 - New York to London</option>
+        <option value="FL205">FL205 - Los Angeles to Tokyo</option>
+      </select>
+
+      <label>Seat Preference:</label>
+      <select name="seat">
+        <option value="Window">Window</option>
+        <option value="Aisle">Aisle</option>
+        <option value="Middle">Middle</option>
+      </select>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Flight Reservation System</p>
+</footer>
+
+</body>
+</html>
